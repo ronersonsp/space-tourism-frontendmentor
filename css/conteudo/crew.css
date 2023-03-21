@@ -1,0 +1,157 @@
+.crew {
+  align-items: end;
+  background: url('../../img/crew/background-crew-desktop.jpg');
+  background-size: cover;
+}
+
+.crew-container{
+  justify-content: center;
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: 700px 400px;
+  grid-template-rows: auto 500px 150px;
+  gap: 40px 0px;
+  color: white;
+}
+
+.crew-text-wrapper {
+  grid-column: 1;
+  max-width: 100%;
+  align-self: center;
+}
+.crew-text-ul {
+  display: flex;
+  max-width: 615px;
+  overflow: hidden;
+}
+.crew-text {
+  grid-column: 1 / 2;
+  animation: toAppear 1s forwards;
+}
+.crew-text,
+.crew-img li{
+  display: none;
+}
+.crew-text.active,
+.crew-img li.active {
+  display: block;
+}
+.crew-text span{
+  opacity: 0.5;
+}
+.crew-text h3{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  white-space: nowrap;
+}
+.crew-text p{
+  max-width: 450px;
+}
+
+.crew-img {
+  display: flex;
+  justify-self: center;
+  align-items: end;
+}
+.crew-img li{
+  animation: toLeft 1s forwards;
+}
+.crew-img li img {
+  max-height: 650px;
+}
+
+.crew-nav {
+  grid-column: 1;
+  display: flex;
+  gap: 30px;
+}
+
+.crew-nav li {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(151, 151, 151, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.crew-nav li:hover {
+  background-color: rgb(151, 151, 151, .5);
+}
+.crew-nav li.active {
+  background-color: white;
+}
+
+
+
+@keyframes toAppear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .crew-container {
+    width: 1000px;
+    margin: 0 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 300px auto 500px;
+    gap: 0px;
+    justify-items: center;
+  }
+  .crew-container h5 {
+    justify-self: start;
+    margin-bottom: 20px;
+  }
+  .crew-text {
+    text-align: center;
+  }
+  .crew-nav {
+    justify-self: center;
+  }
+  .crew-img {
+    display: flex;
+    max-width: 400px;
+    justify-self: center;
+    align-items: end;
+  }
+  .crew-img li img {
+    max-height: 470px;
+  }
+}
+
+@media (max-width: 600px) {
+  .crew-container { 
+    max-width: 327px;
+    grid-template-rows: auto 400px auto 250px;
+    gap: 30px 0;
+    place-self: center;
+  }
+  .crew-container h5 {
+    justify-self: center;
+  }
+  .crew-text {
+    max-width: 320px;
+  }
+  .crew-text:nth-child(n+3) p{
+    max-width: 280px;
+  }
+  .crew-text h3 {
+    margin-bottom: 20px;
+  }
+  .crew-nav {
+    grid-row: 3;
+  }
+  .crew-img {
+    grid-row: 2;
+  }
+  .crew-img li {
+    height: 400px;
+  }
+  .crew-img li img {
+    max-height: 100%;
+  }
+}

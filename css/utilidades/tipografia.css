@@ -1,0 +1,94 @@
+.font-1-l{
+  font: 400 9.375rem "Bellefair", serif;
+  text-transform: uppercase;
+}
+.font-1-ml{
+  font: 400 6.25rem "Bellefair", serif;
+  text-transform: uppercase;
+}
+.font-1-m{
+  font: 400 3.5rem "Bellefair", serif;
+  text-transform: uppercase;
+}
+.font-1-ms{
+  font: 400 2rem "Bellefair", serif;
+  text-transform: uppercase;
+}
+.font-1-s{
+  font: 400 1.75rem "Bellefair", serif; 
+}
+
+
+.font-2-l{
+  font: 400 1.75rem "Barlow Condensed", serif;
+  letter-spacing: 4.75px;
+  text-transform: uppercase;
+}
+.font-2-m{
+  font: 400 1rem "Barlow Condensed", serif;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.font-2-s{
+  font: 400 .875rem "Barlow Condensed", serif;
+  letter-spacing: 2.35px;
+  text-transform: uppercase;
+}
+
+
+.font-3 {
+  font: 400 1.125rem/2rem "Barlow", serif;
+  color: var(--c2);
+}
+
+@media (max-width: 1200px) {
+  .font-1-ml {
+    font-size: 5rem;
+  }
+  .font-1-m {
+    font-size: 2.5rem;
+  }
+  .font-1-ms {
+    font-size: 1.5rem;
+  }
+  .font-1-s {
+    font-size: 1.75rem;
+  }
+
+  .font-2-l {
+    font-size: 1.25rem;
+    letter-spacing: 3.38px;
+  }
+  .font-2-m {
+    font-size: .875rem;
+    letter-spacing: 2.36px;
+  }
+  .font-3 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-1-l {
+    font-size: 5rem;
+  }
+  .font-1-ml {
+    font-size: 3.5rem;
+  }
+  .font-1-m {
+    font-size: 1.5rem;
+  }
+  .font-1-ms {
+    font-size: 1rem;
+  }
+  .font-2-l {
+    font-size: 1rem;
+  }
+  .font-2-m {
+    font-size: .875rem;
+  }
+  .font-3 {
+    font-size: .93rem;
+  }
+}

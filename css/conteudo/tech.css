@@ -1,0 +1,163 @@
+.tech {
+  align-items: center;
+  background: url('../../img/technology/background-technology-desktop.jpg');
+  background-size: cover;
+}
+
+.tech-container {
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: auto 500px 1fr;
+  grid-template-rows: auto 100px 1fr;
+  gap: 30px 30px;
+  color: white;
+}
+.tech-container h5 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+.tech-nav {
+  grid-row: 3;
+}
+.tech-nav li{
+  text-align: center;
+  line-height: 5rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255, .5);
+  cursor: pointer;
+}
+.tech-nav li:hover {
+  border-color: white;
+}
+.tech-nav li.active {
+  background-color: white;
+  color: var(--c1);
+}
+.tech-text {
+  grid-row: 3;
+}
+.tech-text li {
+  animation: toDown 1s forwards;
+}
+.tech-text p{
+  max-width: 444px;
+}
+.tech-text span{
+  color: var(--c2);
+}
+.tech-text h3{
+  margin: 15px 0px;
+}
+
+.tech-img {
+  grid-row: 2 / -1;
+}
+.tech-img li{
+  animation: toUp 1s forwards;
+}
+
+.tech-text li,
+.tech-img li {
+  display: none;
+}
+
+.tech-text li.active,
+.tech-img li.active {
+  display: block;
+}
+
+
+
+
+
+@keyframes toDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0px, -50px, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes toUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .tech-container {
+    width: 1000px;
+    margin: 0 30px;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+  }
+  .tech-container h5 {
+    justify-self: start;
+  }
+  .tech-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tech-text {
+    grid-row: auto;
+    text-align: center;
+  }
+  .tech-text li {
+    animation: toRight 1s forwards;
+  }
+  .tech-nav {
+    gap: 16px;
+  }
+  .tech-nav li {
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+  }
+  .tech-img li{
+    animation: toLeft 1s forwards;
+  }
+}
+
+@media (max-width: 850px) {
+  .tech-container {
+    max-width: 600px;
+    margin: 0 30px;
+  }
+  .tech-img li img{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech-container {
+    max-width: 600px;
+    margin: 0 30px;
+  }
+  .tech-container h5 {
+    justify-self: center;
+  }
+  .tech-nav li {
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  .tech-text {
+    height: 220px;
+  }
+  .tech-img li img{
+    max-width: 100%;
+  }
+}
+/* 650px, colocar menu hamburguer e centralizar o h5 no centro */
