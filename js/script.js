@@ -21,9 +21,3 @@ const scroll = new Scroll('[data-menu="suave"] a[href^="#"]');
 scroll.init();
 
 const menu = new Menu('.menu-hamburguer', '.header-nav');
-
-// const scrollAnima = new ScrollAnima('.wrapper')
-// scrollAnima.init();
-
-
-// 
